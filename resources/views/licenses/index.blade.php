@@ -1,7 +1,20 @@
 @extends('layouts.app')
 
 @section('content')
-<h1 class="text-center">Licenses</h1>
+<form action="/licenses" method="POST">
+    @csrf
+    <div class="form-group">
+        <label for="numero">Numéro</label>
+        <input name="numero" type="text" class="form-control" value="{{ old('numero') }}">
+    </div>
+    <div class="form-group">
+        <label for="validityDate">Date de validitée</label>
+        <input name="validityDate" type="date" class="form-control" value="{{ old('validityDate') }}">
+    </div>
+
+    <button type="submit" class="btn btn-block mb-3 btn-primary">Créer</button>
+</form>
+<h1 class="text-center">Listes de toutes les licenses</h1>
 <table class="table text-center mt-3">
     <thead>
         <tr>
@@ -16,9 +29,15 @@
         <tr>
             <th scope="row">{{ $license->id }}</th>
             <td>{{ $license->numero }}</td>
-            <td>{{ Carbon\Carbon::parse($license->validityDate)->format('d m Y') }}</td>
-            <th><a href=""><i class="text-dark fas fa-edit"></i></a></th>
-            <th><a href=""><i class="text-danger fas fa-trash"></i></a></th>
+            <td>{{ Carbon\Carbon::parse($license->validityDate)->format('d-m-Y') }}</td>
+            <th><a href="/licenses/{{ $license->id }}/edit" class="btn btn-sm btn-outline-secondary"><i class="text-dark fas fa-edit"></i></a></th>
+            <th>
+                <form action="/licenses/{{ $license->id }}" method="post">
+                    @method('delete')
+                    @csrf
+                    <button type="submit" class="btn btn-sm btn-outline-danger"><i class="text-danger fas fa-trash"></i></button>
+                </form>
+            </th>
         </tr>
         @endforeach
     </tbody>

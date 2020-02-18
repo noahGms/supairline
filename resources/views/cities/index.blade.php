@@ -13,25 +13,37 @@
         @enderror
     </div>
 
+    <div class="form-group">
+        <label for="zipCode">Code postale</label>
+        <input name="zipCode" type="text" class="form-control @error('zipCode') is-invalid @enderror" value="{{ old('zipCode') }}">
+        @error('zipCode')
+        <div class="invalid-feedback">
+            {{ $errors->first('zipCode') }}
+        </div>
+        @enderror
+    </div>
+
     <button type="submit" class="btn btn-block mb-3 btn-primary">Créer</button>
 </form>
-<h1 class="text-center">Listes de toutes les Fonctions</h1>
+<h1 class="text-center">Listes de toutes les villes</h1>
 <table class="table text-center mt-3">
     <thead>
         <tr>
             <th scope="col">ID</th>
             <th scope="col">Nom</th>
+            <th scope="col">Code postale</th>
             <th scope="col" colspan="2">Actions</th>
         </tr>
     </thead>
     <tbody>
-        @foreach($employeesFunctions as $ef)
+        @foreach($cities as $city)
         <tr>
-            <th scope="row">{{ $ef->id }}</th>
-            <td>{{ $ef->name }}</td>
-            <th><a href="/functions/{{ $ef->id }}/edit" class="btn btn-sm btn-outline-secondary"><i class="text-dark fas fa-edit"></i></a></th>
+            <th scope="row">{{ $city->id }}</th>
+            <td>{{ $city->name }}</td>
+            <td>{{ $city->zipCode }}</td>
+            <th><a href="/cities/{{ $city->id }}/edit" class="btn btn-sm btn-outline-secondary"><i class="text-dark fas fa-edit"></i></a></th>
             <th>
-                <form action="/functions/{{ $ef->id }}" method="post">
+                <form action="/cities/{{ $city->id }}" method="post">
                     @method('delete')
                     @csrf
                     <button type="submit" class="btn btn-sm btn-outline-danger"><i class="text-danger fas fa-trash"></i></button>

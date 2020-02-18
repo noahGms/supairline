@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateEmployeesFunctionsTable extends Migration
+class CreateCitiesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,10 @@ class CreateEmployeesFunctionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('employees_functions', function (Blueprint $table) {
+        Schema::create('cities', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name')->unique();
+            $table->string('zipCode', 5)->unique();
             $table->timestamps();
         });
     }
@@ -27,6 +28,6 @@ class CreateEmployeesFunctionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('employees_functions');
+        Schema::dropIfExists('cities');
     }
 }

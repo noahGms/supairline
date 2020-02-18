@@ -15,7 +15,7 @@ class CreateLicensesTable extends Migration
     {
         Schema::create('licenses', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('numero', 8);
+            $table->string('numero', 8)->unique();
             $table->date('validityDate');
             $table->timestamps();
         });

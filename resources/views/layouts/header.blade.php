@@ -3,5 +3,6 @@
     <nav class="my-2 my-md-0 mr-md-3">
         <a class="p-2 text-dark" href="/licenses">Licences</a>
         <a class="p-2 text-dark" href="/functions">Fonctions</a>
+        <a class="p-2 text-dark" href="/cities">Villes</a>
     </nav>
 </div>

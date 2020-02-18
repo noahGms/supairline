@@ -28,3 +28,9 @@ Route::post('/functions', 'EmployeesFunctionsController@store');
 Route::get('/functions/{function}/edit', 'EmployeesFunctionsController@edit');
 Route::patch('/functions/{function}', 'EmployeesFunctionsController@update');
 Route::delete('/functions/{function}', 'EmployeesFunctionsController@destroy');
+
+Route::get('/cities', 'CitiesController@index');
+Route::post('/cities', 'CitiesController@store');
+Route::get('/cities/{city}/edit', 'CitiesController@edit');
+Route::patch('/cities/{city}', 'CitiesController@update');
+Route::delete('/cities/{city}', 'CitiesController@destroy');

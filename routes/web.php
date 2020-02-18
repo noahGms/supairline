@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/licenses', 'LicensesController@index');
+Route::get('/licenses/create', 'LicensesController@create');
+Route::post('/licenses', 'LicensesController@store');

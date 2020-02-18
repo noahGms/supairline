@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\License;
+use App\EmployeesFunction;
 use Illuminate\Http\Request;
 
-class LicensesController extends Controller
+class EmployeesFunctionsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,11 +14,9 @@ class LicensesController extends Controller
      */
     public function index()
     {
-        $licenses = License::all();
-
-        return view('licenses.index', compact('licenses'));
+        $employeesFunctions = EmployeesFunction::all();
+        return view('employeesFunctions.index', compact('employeesFunctions'));
     }
-
     /**
      * Store a newly created resource in storage.
      *
@@ -28,13 +26,12 @@ class LicensesController extends Controller
     public function store(Request $request)
     {
         $data = request()->validate([
-            'numero' => 'required|max:8',
-            'validityDate' => 'required'
+            'name' => 'required'
         ]);
 
-        License::create($data);
-        flash('La licence a bien été crée')->success();
-        return redirect('/licenses');
+        EmployeesFunction::create($data);
+        flash('La fonctions a bien été crée');
+        return redirect('/functions');
     }
 
     /**
@@ -45,8 +42,8 @@ class LicensesController extends Controller
      */
     public function edit($id)
     {
-        $license = License::findOrFail($id);
-        return view('licenses.edit', compact('license'));
+        $employeesFunction = EmployeesFunction::findOrFail($id);
+        return view('employeesFunctions.edit', compact('employeesFunction'));
     }
 
     /**
@@ -59,15 +56,13 @@ class LicensesController extends Controller
     public function update(Request $request, $id)
     {
         $data = request()->validate([
-            'numero' => 'required|max:8',
-            'validityDate' => 'required'
+            'name' => 'required'
         ]);
 
-        $license = License::findOrFail($id);
-        $license->update($data);
-
-        flash('La licence a bien été modifier')->success();
-        return redirect('/licenses');
+        $employeesFunction = EmployeesFunction::findOrFail($id);
+        $employeesFunction->update($data);
+        flash('La fonction a bien été modifier');
+        return redirect('/functions');
     }
 
     /**
@@ -78,9 +73,9 @@ class LicensesController extends Controller
      */
     public function destroy($id)
     {
-        $license = License::findOrFail($id);
-        $license->delete();
-        flash('La licence a bien été supprimée')->success();
-        return redirect('/licenses');
+        $employeesFunction = EmployeesFunction::findOrFail($id);
+        $employeesFunction->delete();
+        flash('La fonction a bien été supprimée');
+        return redirect('/functions');
     }
 }

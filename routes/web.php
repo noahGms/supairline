@@ -17,10 +17,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-//Route::resource('licenses', 'LicensesController');
-
 Route::get('/licenses', 'LicensesController@index');
 Route::post('/licenses', 'LicensesController@store');
 Route::get('/licenses/{license}/edit', 'LicensesController@edit');
 Route::patch('/licenses/{license}', 'LicensesController@update');
 Route::delete('/licenses/{license}', 'LicensesController@destroy');
+
+Route::get('/functions', 'EmployeesFunctionsController@index');
+Route::post('/functions', 'EmployeesFunctionsController@store');
+Route::get('/functions/{function}/edit', 'EmployeesFunctionsController@edit');
+Route::patch('/functions/{function}', 'EmployeesFunctionsController@update');
+Route::delete('/functions/{function}', 'EmployeesFunctionsController@destroy');

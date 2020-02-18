@@ -5,11 +5,21 @@
     @csrf
     <div class="form-group">
         <label for="numero">Numéro</label>
-        <input name="numero" type="text" class="form-control" value="{{ old('numero') }}">
+        <input name="numero" type="text" class="form-control @error('numero') is-invalid @enderror" value="{{ old('numero') }}">
+        @error('numero')
+        <div class="invalid-feedback">
+            {{ $errors->first('numero') }}
+        </div>
+        @enderror
     </div>
     <div class="form-group">
         <label for="validityDate">Date de validitée</label>
-        <input name="validityDate" type="date" class="form-control" value="{{ old('validityDate') }}">
+        <input name="validityDate" type="date" class="form-control @error('validityDate') is-invalid @enderror" value="{{ old('validityDate') }}">
+        @error('validityDate')
+        <div class="invalid-feedback">
+            {{ $errors->first('validityDate') }}
+        </div>
+        @enderror
     </div>
 
     <button type="submit" class="btn btn-block mb-3 btn-primary">Créer</button>

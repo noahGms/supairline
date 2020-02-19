@@ -5,5 +5,6 @@
         <a class="p-2 text-dark" href="/functions">Fonctions</a>
         <a class="p-2 text-dark" href="/cities">Villes</a>
         <a class="p-2 text-dark" href="/employees">Employées</a>
+        <a class="p-2 text-dark" href="/types">Types</a>
     </nav>
 </div>

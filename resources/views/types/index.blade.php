@@ -4,7 +4,7 @@
 <form action="/types" method="POST">
     @csrf
     <div class="form-group">
-        <label for="name">Numéro</label>
+        <label for="name">Nom</label>
         <input name="name" type="text" class="form-control @error('name') is-invalid @enderror" value="{{ old('name') }}">
         @error('name')
         <div class="invalid-feedback">

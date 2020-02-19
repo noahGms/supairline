@@ -34,3 +34,5 @@ Route::post('/cities', 'CitiesController@store');
 Route::get('/cities/{city}/edit', 'CitiesController@edit');
 Route::patch('/cities/{city}', 'CitiesController@update');
 Route::delete('/cities/{city}', 'CitiesController@destroy');
+
+Route::resource('employees', 'EmployeesController');

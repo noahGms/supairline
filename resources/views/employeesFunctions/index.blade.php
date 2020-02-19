@@ -15,7 +15,7 @@
 
     <button type="submit" class="btn btn-block mb-3 btn-primary">Créer</button>
 </form>
-<h1 class="text-center">Listes de toutes les Fonctions</h1>
+<h1 class="text-center">Listes de toutes les fonctions</h1>
 <table class="table text-center mt-3">
     <thead>
         <tr>

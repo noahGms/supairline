@@ -11,4 +11,8 @@ class City extends Model
     public function employee() {
         return $this->hasMany('App\Employee');
     }
+
+    public function route() {
+        return $this->hasMany('App\Route');
+    }
 }

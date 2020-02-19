@@ -7,5 +7,6 @@
         <a class="p-2 text-dark" href="/employees">Employées</a>
         <a class="p-2 text-dark" href="/types">Types</a>
         <a class="p-2 text-dark" href="/airplanes">Avions</a>
+        <a class="p-2 text-dark" href="/routes">Itinéraires</a>
     </nav>
 </div>

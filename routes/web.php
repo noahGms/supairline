@@ -47,3 +47,8 @@ Route::resource('types','TypesController' )->except([
 Route::resource('airplanes', 'AirplanesController')->except([
     'create', 'show'
 ]);
+
+// Route routes
+Route::resource('routes', 'RoutesController')->except([
+    'create', 'show'
+]);

@@ -23,7 +23,7 @@ class Employee extends Model
     }
 
     public function employeesFunction() {
-        return $this->belongsTo('App\EmployeesFunction', 'id');
+        return $this->belongsTo('App\EmployeesFunction', 'employeesFunction_id');
     }
 
     public function city() {

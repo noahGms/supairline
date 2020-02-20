@@ -48,4 +48,7 @@ class Departure extends Model
         return $this->belongsTo('App\Flight', 'flight_id');
     }
 
+    public function ticket() {
+        return $this->hasMany('App\Tickets');
+    }
 }

@@ -9,7 +9,7 @@ class Airplane extends Model
     protected $fillable = ['numero', 'capacity', 'type_id'];
 
     public function type() {
-        return $this->belongsTo('App\Type', 'id');
+        return $this->belongsTo('App\Type', 'type_id');
     }
 
     public function flight() {

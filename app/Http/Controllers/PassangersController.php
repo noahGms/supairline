@@ -63,7 +63,7 @@ class PassangersController extends Controller
      */
     public function edit($id)
     {
-        $passanger = Passanger::find($id);
+        $passanger = Passanger::findOrFail($id);
         $cities = City::all();
         return view('passangers.edit', compact('passanger', 'cities'));
     }
@@ -88,7 +88,7 @@ class PassangersController extends Controller
 
         ]);
 
-        $passanger = Passanger::find($id);
+        $passanger = Passanger::findOrFail($id);
         $passanger->update($data);
         flash('Le passager a bien été modifié')->success();
         return redirect('/passangers');
@@ -102,7 +102,7 @@ class PassangersController extends Controller
      */
     public function destroy($id)
     {
-        $passanger = Passanger::find($id);
+        $passanger = Passanger::findOrFail($id);
         $passanger->delete();
         flash('Le passager a bien été supprimé')->success();
         return redirect('/passangers');

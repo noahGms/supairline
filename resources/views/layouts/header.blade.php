@@ -11,5 +11,6 @@
         <a class="p-2 text-dark" href="/flights">Vols</a>
         <a class="p-2 text-dark" href="/departures">Départs</a>
         <a class="p-2 text-dark" href="/passangers">Passagers</a>
+        <a class="p-2 text-dark" href="/tickets">Tickets</a>
     </nav>
 </div>

@@ -11,6 +11,10 @@ class Passanger extends Model
     ];
 
     public function city() {
-        return $this->belongsTo('App\City');
+        return $this->belongsTo('App\City', 'city_id');
+    }
+
+    public function ticket() {
+        return $this->hasMany('App\Ticket');
     }
 }

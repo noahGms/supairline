@@ -15,4 +15,8 @@ class City extends Model
     public function route() {
         return $this->hasMany('App\Route');
     }
+
+    public function passager() {
+        return $this->hasMany('App\Passanger');
+    }
 }

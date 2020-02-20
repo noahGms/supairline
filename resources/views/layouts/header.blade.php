@@ -9,6 +9,7 @@
         <a class="p-2 text-dark" href="/airplanes">Avions</a>
         <a class="p-2 text-dark" href="/routes">Itinéraires</a>
         <a class="p-2 text-dark" href="/flights">Vols</a>
-        <a class="p-2 text-dark" href="/departures">Départ</a>
+        <a class="p-2 text-dark" href="/departures">Départs</a>
+        <a class="p-2 text-dark" href="/passangers">Passagers</a>
     </nav>
 </div>

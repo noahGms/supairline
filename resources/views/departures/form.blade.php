@@ -47,7 +47,7 @@
 <div class="form-group">
     <label for="employeesPiloteId">Pilote 1</label>
     <select name="employeesPiloteId" id="employeesPiloteId" class="custom-select @error('employeesPiloteId') is-invalid @enderror">
-        <option>-- Selectionner un itinéraire --</option>
+        <option>-- Selectionner un pilote --</option>
         @foreach($employees as $employee)
         <option value="{{ $employee->id }}" {{ $departure->employeesPiloteId == $employee->id ? 'selected' : '' }}>{{ $employee->name }} {{ $employee->firstName }}</option>
         @endforeach
@@ -61,7 +61,7 @@
 <div class="form-group">
     <label for="employeesPiloteId1">Pilote 2</label>
     <select name="employeesPiloteId1" id="employeesPiloteId1" class="custom-select @error('employeesPiloteId1') is-invalid @enderror">
-        <option>-- Selectionner un itinéraire --</option>
+        <option>-- Selectionner un deuxième pilote --</option>
         @foreach($employees as $employee)
         <option value="{{ $employee->id }}" {{ $departure->employeesPiloteId1 == $employee->id ? 'selected' : '' }}>{{ $employee->name }} {{ $employee->firstName }}</option>
         @endforeach
@@ -75,7 +75,7 @@
 <div class="form-group">
     <label for="employeesMemberId1">Membre d'équipage 1</label>
     <select name="employeesMemberId1" id="employeesMemberId1" class="custom-select @error('employeesMemberId1') is-invalid @enderror">
-        <option>-- Selectionner un itinéraire --</option>
+        <option>-- Selectionner un membre --</option>
         @foreach($employees as $employee)
         <option value="{{ $employee->id }}" {{ $departure->employeesMemberId1 == $employee->id ? 'selected' : '' }}>{{ $employee->name }} {{ $employee->firstName }}</option>
         @endforeach
@@ -89,7 +89,7 @@
 <div class="form-group">
     <label for="employeesMemberId2">Membre d'équipage 2</label>
     <select name="employeesMemberId2" id="employeesMemberId2" class="custom-select @error('employeesMemberId2') is-invalid @enderror">
-        <option>-- Selectionner un itinéraire --</option>
+        <option>-- Selectionner un deuxième membre --</option>
         @foreach($employees as $employee)
         <option value="{{ $employee->id }}" {{ $departure->employeesMemberId2 == $employee->id ? 'selected' : '' }}>{{ $employee->name }} {{ $employee->firstName }}</option>
         @endforeach
@@ -103,7 +103,7 @@
 <div class="form-group">
     <label for="employeesMemberId3">Membre d'équipage 3</label>
     <select name="employeesMemberId3" id="employeesMemberId3" class="custom-select @error('employeesMemberId3') is-invalid @enderror">
-        <option>-- Selectionner un itinéraire --</option>
+        <option>-- Selectionner un troisième membre --</option>
         @foreach($employees as $employee)
         <option value="{{ $employee->id }}" {{ $departure->employeesMemberId3 == $employee->id ? 'selected' : '' }}>{{ $employee->name }} {{ $employee->firstName }}</option>
         @endforeach
@@ -117,7 +117,7 @@
 <div class="form-group">
     <label for="employeesMemberId4">Membre d'équipage 4</label>
     <select name="employeesMemberId4" id="employe" class="custom-select @error('employeesMemberId4') is-invalid @enderror">
-        <option>-- Selectionner un itinéraire --</option>
+        <option>-- Selectionner un quatrième membre --</option>
         @foreach($employees as $employee)
         <option value="{{ $employee->id }}" {{ $departure->employeesMemberId4 == $employee->id ? 'selected' : '' }}>{{ $employee->name }} {{ $employee->firstName }}</option>
         @endforeach
@@ -131,7 +131,7 @@
 <div class="form-group">
     <label for="flight_id">Vol</label>
     <select name="flight_id" id="flight_id" class="custom-select @error('flight_id') is-invalid @enderror"">
-        <option>-- Selectionner un itinéraire --</option>
+        <option>-- Selectionner un vol --</option>
         @foreach($flights as $flight)
         <option value=" {{ $flight->id }}" {{ $departure->flight_id == $flight->id ? 'selected' : '' }}>{{ $flight->numero }}</option>
         @endforeach

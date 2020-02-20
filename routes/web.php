@@ -64,3 +64,8 @@ Route::resource('flights', 'FlightsController')->except([
 Route::resource('departures', 'DeparturesController')->except([
     'show'
 ]);
+
+// Passanger routes
+Route::resource('passangers', 'PassangersController')->except([
+    'show'
+]);

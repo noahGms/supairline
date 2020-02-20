@@ -52,7 +52,7 @@ class EmployeesController extends Controller
             'city_id' => 'required|integer',
             'salary' => 'required',
             'hours' => 'required',
-            'license_id' => 'integer',
+            'license_id' => '',
             'employeesFunction_id' => 'required|integer'
         ]);
 

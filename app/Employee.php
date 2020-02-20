@@ -29,4 +29,8 @@ class Employee extends Model
     public function city() {
         return $this->belongsTo('App\City');
     }
+
+    public function departure() {
+        return $this->hasMany('App\Departure');
+    }
 }

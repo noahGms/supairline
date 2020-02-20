@@ -14,7 +14,7 @@
     </div>
 
     <div class="form-group">
-        <label for="zipCode">Code postale</label>
+        <label for="zipCode">Code postal</label>
         <input name="zipCode" type="text" class="form-control @error('zipCode') is-invalid @enderror" value="{{ old('zipCode') }}">
         @error('zipCode')
         <div class="invalid-feedback">
@@ -31,7 +31,7 @@
         <tr>
             <th scope="col">ID</th>
             <th scope="col">Nom</th>
-            <th scope="col">Code postale</th>
+            <th scope="col">Code postal</th>
             <th scope="col" colspan="2">Actions</th>
         </tr>
     </thead>

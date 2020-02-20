@@ -35,7 +35,7 @@ class AirplanesController extends Controller
         ]);
 
         Airplane::create($data);
-        flash("L'avion a bien été créer");
+        flash("L'avion a bien été créer")->success();
         return redirect('/airplanes');
     }
 
@@ -69,7 +69,7 @@ class AirplanesController extends Controller
 
         $airplane = Airplane::findOrFail($id);
         $airplane->update($data);
-        flash("L'avion a bien été modifié");
+        flash("L'avion a bien été modifié")->success();
         return redirect('/airplanes');
     }
 
@@ -83,7 +83,7 @@ class AirplanesController extends Controller
     {
         $airplane = Airplane::findOrFail($id);
         $airplane->delete();
-        flash("L'avion a bien été supprimé");
+        flash("L'avion a bien été supprimé")->success();
         return redirect('/airplanes');
     }
 }

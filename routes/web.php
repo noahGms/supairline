@@ -36,7 +36,9 @@ Route::resource('cities','CitiesController' )->except([
 ]);
 
 // Employee routes
-Route::resource('employees', 'EmployeesController');
+Route::resource('employees', 'EmployeesController')->except([
+    'show'
+]);
 
 // Type routes
 Route::resource('types','TypesController' )->except([
@@ -51,4 +53,9 @@ Route::resource('airplanes', 'AirplanesController')->except([
 // Route routes
 Route::resource('routes', 'RoutesController')->except([
     'create', 'show'
+]);
+
+// Flight routes
+Route::resource('flights', 'FlightsController')->except([
+    'show'
 ]);

@@ -9,5 +9,4 @@
 
 	<button type="submit" class="btn btn-block btn-primary">Modifier</button>
 </form>
-
 @endsection

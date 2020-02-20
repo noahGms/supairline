@@ -15,7 +15,7 @@
         @enderror
     </div>
     <div class="form-group">
-        <label for="zipCode">Code postale</label>
+        <label for="zipCode">Code postal</label>
         <input name="zipCode" type="text" class="form-control @error('zipCode') is-invalid @enderror" value="{{ old('zipCode') ?? $city->zipCode }}">
         @error('zipCode')
         <div class="invalid-feedback">

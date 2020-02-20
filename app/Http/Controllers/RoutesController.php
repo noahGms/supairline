@@ -35,7 +35,7 @@ class RoutesController extends Controller
         ]);
 
         Route::create($data);
-        flash("L'itinéraire a bien été créé");
+        flash("L'itinéraire a bien été créé")->success();
         return redirect('/routes');
     }
 
@@ -69,7 +69,7 @@ class RoutesController extends Controller
 
         $route = Route::findOrFail($id);
         $route->update($data);
-        flash("L'itinéraire a bien été modifié");
+        flash("L'itinéraire a bien été modifié")->success();
         return redirect('/routes');
     }
 

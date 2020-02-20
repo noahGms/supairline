@@ -30,7 +30,7 @@ class EmployeesFunctionsController extends Controller
         ]);
 
         EmployeesFunction::create($data);
-        flash('La fonctions a bien été crée');
+        flash('La fonctions a bien été crée')->success();
         return redirect('/functions');
     }
 
@@ -61,7 +61,7 @@ class EmployeesFunctionsController extends Controller
 
         $employeesFunction = EmployeesFunction::findOrFail($id);
         $employeesFunction->update($data);
-        flash('La fonction a bien été modifier');
+        flash('La fonction a bien été modifier')->success();
         return redirect('/functions');
     }
 
@@ -75,7 +75,7 @@ class EmployeesFunctionsController extends Controller
     {
         $employeesFunction = EmployeesFunction::findOrFail($id);
         $employeesFunction->delete();
-        flash('La fonction a bien été supprimée');
+        flash('La fonction a bien été supprimée')->success();
         return redirect('/functions');
     }
 }

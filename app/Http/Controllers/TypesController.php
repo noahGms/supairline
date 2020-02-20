@@ -31,7 +31,7 @@ class TypesController extends Controller
         ]);
 
         Type::create($data);
-        flash('Le type a bien été créé');
+        flash('Le type a bien été créé')->success();
         return redirect('/types');
     }
 
@@ -62,7 +62,7 @@ class TypesController extends Controller
 
         $type = Type::findOrFail($id);
         $type->update($data);
-        flash('Le type a bien été modifié');
+        flash('Le type a bien été modifié')->success();
         return redirect('/types');
     }
 
@@ -76,7 +76,7 @@ class TypesController extends Controller
     {
         $type = Type::findOrFail($id);
         $type->delete();
-        flash('Le type a bien été supprimé');
+        flash('Le type a bien été supprimé')->success();
         return redirect('/types');
     }
 }

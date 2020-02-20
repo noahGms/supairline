@@ -16,4 +16,8 @@ class Route extends Model
         return $this->belongsTo('App\City', 'arrivalCity');
     }
 
+    public function flight() {
+        return $this->hasMany('App/Flight');
+    }
+
 }

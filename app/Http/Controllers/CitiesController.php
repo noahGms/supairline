@@ -78,6 +78,7 @@ class CitiesController extends Controller
     {
         $city = City::findOrFail($id);
         $city->delete();
+        flash('La ville a bien été supprimée')->success();
         return redirect('/cities');
     }
 }

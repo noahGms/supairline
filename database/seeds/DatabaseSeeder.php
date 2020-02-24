@@ -12,7 +12,6 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         factory(App\License::class, 10)->create();
-        // $this->call(UsersTableSeeder::class);
         DB::table('employees_functions')->insert([
             'name' => 'Pilote'
         ]);

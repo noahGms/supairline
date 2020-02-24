@@ -41,6 +41,35 @@
         </div>
     </div>
 </div>
-<div class="row">
+<div class="row mt-3">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                Les départs du jour
+            </div>
+            <div class="card-body">
+                <table class="text-center table table-sm">
+                    <thead>
+                    <tr>
+                        <th scope="col">Numéro</th>
+                        <th scope="col">Date de départ</th>
+                        <th scope="col">Places libre</th>
+                        <th scope="col">Places occupée</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @foreach($departures as $departure)
+                    <tr>
+                        <td>{{ $departure->numero }}</td>
+                        <td>{{ $departure->departureDate }}</td>
+                        <td>{{ $departure->placeEmpty }}</td>
+                        <td>{{ $departure->placeUsed }}</td>
+                    </tr>
+                    @endforeach
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 </div>
 @endsection

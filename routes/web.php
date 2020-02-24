@@ -15,9 +15,7 @@ use Illuminate\Http\Resources\Json\Resource;
 
 
 // Dashboard routes
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'DashboardController@index');
 
 
 // License routes

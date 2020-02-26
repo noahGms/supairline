@@ -18,12 +18,12 @@
 	<tbody>
 		@foreach($passangers as $passanger)
 		<tr>
-			<th>{{ $passanger->id }}</th>
-			<th>{{ $passanger->numero }}</th>
-			<th>{{ $passanger->name }} {{ $passanger->firstName }}</th>
-			<th>{{ $passanger->address }} {{ $passanger->city->name }}-{{ $passanger->city->zipCode }}</th>
-			<th>{{ $passanger->job }}</th>
-			<th>{{ $passanger->bank }}</th>
+			<th>{{ $passanger->id ?? '' }}</th>
+			<th>{{ $passanger->numero ?? '' }}</th>
+			<th>{{ $passanger->name ?? '' }} {{ $passanger->firstName ?? '' }}</th>
+			<th>{{ $passanger->address ?? '' }} {{ $passanger->city->name ?? '' }}-{{ $passanger->city->zipCode ?? '' }}</th>
+			<th>{{ $passanger->job ?? '' }}</th>
+			<th>{{ $passanger->bank ?? '' }}</th>
 			<th><a href="/passangers/{{ $passanger->id }}/edit" class="btn btn-sm btn-outline-secondary"><i class="text-dark fas fa-edit"></i></a></th>
 			<th>
 				<form action="/passangers/{{ $passanger->id }}" method="post">

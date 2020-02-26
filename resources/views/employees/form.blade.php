@@ -38,7 +38,7 @@
 <div class="form-group">
     <label for="city_id">Ville</label>
     <select name="city_id" id="city_id" class="custom-select @error('city_id') is-invalid @enderror"">
-        <option>-- Selectionner une ville --</option>
+        <option value="0">-- Selectionner une ville --</option>
         @foreach($cities as $city)
         <option value="{{ $city->id }}" {{ $employee->city_id == $city->id ? 'selected' : '' }}>{{ $city->name }} - {{ $city->zipCode }}</option>
         @endforeach
@@ -70,7 +70,7 @@
 <div class="form-group">
     <label for="license_id">Licence</label>
     <select name="license_id" id="license_id" class="custom-select @error('license_id') is-invalid @enderror">
-        <option>-- Selectionner une licence --</option>
+        <option value="0">-- Selectionner une licence --</option>
         @foreach($licenses as $license)
         <option value="{{ $license->id }}" {{ $employee->license_id == $license->id ? 'selected' : '' }}>{{ $license->numero }}</option>
         @endforeach
@@ -84,7 +84,7 @@
 <div class="form-group">
     <label for="employeesFunction_id">Fonction</label>
     <select name="employeesFunction_id" id="employeesFunction_id" class="custom-select @error('employeesFunction_id') is-invalid @enderror"">
-        <option>-- Selectionner une fonction --</option>
+        <option value="0">-- Selectionner une fonction --</option>
         @foreach($employeesFunctions as $ef)
         <option value="{{ $ef->id }}" {{ $employee->employeesFunction_id == $ef->id ? 'selected' : '' }}>{{ $ef->name }}</option>
         @endforeach

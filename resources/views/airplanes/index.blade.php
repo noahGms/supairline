@@ -24,7 +24,7 @@
     <div class="form-group">
     <label for="type_id">Type</label>
     <select name="type_id" id="type_id" class="custom-select @error('type_id') is-invalid @enderror"">
-        <option>-- Selectionner un type --</option>
+        <option value="0">-- Selectionner un type --</option>
         @foreach($types as $type)
         <option value="{{ $type->id }}">{{ $type->name }}</option>
         @endforeach

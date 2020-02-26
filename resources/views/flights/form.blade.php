@@ -47,7 +47,7 @@
 <div class="form-group">
     <label for="route_id">Itinéraire</label>
     <select name="route_id" id="route_id" class="custom-select @error('route_id') is-invalid @enderror"">
-        <option>-- Selectionner un itinéraire --</option>
+        <option value="0">-- Selectionner un itinéraire --</option>
         @foreach($routes as $route)
         <option value="{{ $route->id }}" {{ $flight->route_id == $route->id ? 'selected' : '' }}>{{ $route->numero }}</option>
         @endforeach
@@ -61,7 +61,7 @@
 <div class="form-group">
     <label for="airplane_id">Avions</label>
     <select name="airplane_id" id="airplane_id" class="custom-select @error('airplane_id') is-invalid @enderror"">
-        <option>-- Selectionner un avion --</option>
+        <option value="0">-- Selectionner un avion --</option>
         @foreach($airplanes as $airplane)
         <option value="{{ $airplane->id }}" {{ $flight->airplane_id == $airplane->id ? 'selected' : '' }}>{{ $airplane->numero }}</option>
         @endforeach

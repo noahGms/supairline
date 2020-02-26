@@ -38,7 +38,7 @@
 <div class="form-group">
     <label for="city_id">Ville</label>
     <select name="city_id" id="city_id" class="custom-select @error('city_id') is-invalid @enderror"">
-        <option>-- Selectionner une ville --</option>
+        <option value="0">-- Selectionner une ville --</option>
         @foreach($cities as $city)
         <option value="{{ $city->id }}" {{ $passanger->city_id == $city->id ? 'selected' : '' }}>{{ $city->name }} {{ $city->zipCode }}</option>
         @endforeach

@@ -26,7 +26,7 @@
     <div class="form-group">
         <label for="departure_id">Depart</label>
         <select name="departure_id" id="departure_id" class="custom-select @error('departure_id') is-invalid @enderror">
-            <option>-- Selectionner un départ --</option>
+            <option value="0">-- Selectionner un départ --</option>
             @foreach($departures as $departure)
             <option value="{{ $departure->id }}" {{ $ticket->departure_id == $departure->id ? 'selected' : '' }}>{{ $departure->numero }}</option>
             @endforeach
@@ -40,7 +40,7 @@
     <div class="form-group">
         <label for="passanger_id">Passager</label>
         <select name="passanger_id" id="passanger_id" class="custom-select @error('passanger_id') is-invalid @enderror">
-            <option>-- Selectionner un départ --</option>
+            <option value="0">-- Selectionner un passager --</option>
             @foreach($passangers as $passanger)
             <option value="{{ $passanger->id }}" {{ $ticket->passanger_id == $passanger->id ? 'selected' : '' }}>{{ $passanger->numero }}</option>
             @endforeach

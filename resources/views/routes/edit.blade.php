@@ -17,7 +17,7 @@
     <div class="form-group">
         <label for="departureCity">Ville de départ</label>
         <select name="departureCity" id="departureCity" class="custom-select @error('departureCity') is-invalid @enderror"">
-            <option>-- Selectionner une ville de départ --</option>
+            <option value="0">-- Selectionner une ville de départ --</option>
             @foreach($cities as $city)
             <option value="{{ $city->id }}" {{ $route->departureCity == $city->id ? 'selected' : '' }}>{{ $city->name }}</option>
             @endforeach
@@ -31,7 +31,7 @@
     <div class="form-group">
         <label for="arrivalCity">Ville d'arrivée</label>
         <select name="arrivalCity" id="arrivalCity" class="custom-select @error('arrivalCity') is-invalid @enderror"">
-            <option>-- Selectionner une ville d'arrivée --</option>
+            <option value="0">-- Selectionner une ville d'arrivée --</option>
             @foreach($cities as $city)
             <option value="{{ $city->id }}" {{ $route->arrivalCity == $city->id ? 'selected' : '' }}>{{ $city->name }}</option>
             @endforeach

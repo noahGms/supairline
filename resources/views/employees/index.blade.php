@@ -19,14 +19,14 @@
 	<tbody>
 		@foreach($employees as $employee)
 		<tr>
-			<th>{{ $employee->id }}</th>
-			<th>{{ $employee->socialNumero }}</th>
-			<th>{{ $employee->name }} {{ $employee->firstName }}</th>
-			<th>{{ $employee->address }} - {{ $employee->city->zipCode }} {{ $employee->city->name }}</th>
-			<th>{{ $employee->salary }}</th>
-			<th>{{ $employee->hours }}</th>
+			<th>{{ $employee->id ?? '' }}</th>
+			<th>{{ $employee->socialNumero ?? '' }}</th>
+			<th>{{ $employee->name ?? '' }} {{ $employee->firstName ?? '' }}</th>
+			<th>{{ $employee->address ?? '' }} - {{ $employee->city->zipCode ?? '' }} {{ $employee->city->name ?? '' }}</th>
+			<th>{{ $employee->salary ?? '' }}</th>
+			<th>{{ $employee->hours ?? '' }}</th>
 			<th>{{ $employee->license->numero ?? '' }}</th>
-			<th>{{ $employee->employeesFunction->name }}</th>
+			<th>{{ $employee->employeesFunction->name ?? '' }}</th>
 			<th><a href="/employees/{{ $employee->id }}/edit" class="btn btn-sm btn-outline-secondary"><i class="text-dark fas fa-edit"></i></a></th>
 			<th>
 				<form action="/employees/{{ $employee->id }}" method="post">

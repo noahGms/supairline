@@ -19,7 +19,6 @@ class DashboardController extends Controller
             ->select('employees.*')
             ->where('employees_functions.name', '=', 'Pilote')
             ->get();
-        dump($employees);
         $flights = Flight::all();
         $departures = Departure::where('departureDate', date('Y-m-d'))->get();
 

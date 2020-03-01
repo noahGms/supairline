@@ -52,10 +52,10 @@
     <tbody>
         @foreach($airplanes as $airplane)
         <tr>
-            <th scope="row">{{ $airplane->id }}</th>
-            <td>{{ $airplane->numero }}</td>
-            <td>{{ $airplane->capacity }}</td>
-            <td>{{ $airplane->type->name }}</td>
+            <th scope="row">{{ $airplane->id ?? '' }}</th>
+            <td>{{ $airplane->numero ?? '' }}</td>
+            <td>{{ $airplane->capacity ?? '' }}</td>
+            <td>{{ $airplane->type->name ?? '' }}</td>
             <th><a href="/airplanes/{{ $airplane->id }}/edit" class="btn btn-sm btn-outline-secondary"><i class="text-dark fas fa-edit"></i></a></th>
             <th>
                 <form action="/airplanes/{{ $airplane->id }}" method="post">

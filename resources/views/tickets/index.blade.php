@@ -67,9 +67,9 @@
     <tbody>
         @foreach($tickets as $ticket)
         <tr>
-            <th scope="row">{{ $ticket->id }}</th>
-            <td>{{ $ticket->date }}</td>
-            <td>{{ $ticket->price }}</td>
+            <th scope="row">{{ $ticket->id ?? '' }}</th>
+            <td>{{ $ticket->date ?? '' }}</td>
+            <td>{{ $ticket->price ?? '' }}</td>
             <td>{{ $ticket->departure->numero ?? '' }}</td>
             <td>{{ $ticket->passanger->numero ?? '' }}</td>
             <th><a href="/tickets/{{ $ticket->id }}/edit" class="btn btn-sm btn-outline-secondary"><i class="text-dark fas fa-edit"></i></a></th>

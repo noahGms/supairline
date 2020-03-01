@@ -20,9 +20,9 @@
                     <tbody>
                         @foreach($employees as $employee)
                         <tr>
-                            <td>{{ $employee->name }} {{ $employee->firstName }}</td>
+                            <td>{{ $employee->name ?? '' }} {{ $employee->firstName ?? '' }}</td>
                             <td>{{ $employee->license->numero ?? '' }}</td>
-                            <td>{{ date('d-m-Y', strtotime($employee->license->validityDate)) }}</td>
+                            <td>{{ date('d-m-Y', strtotime($employee->license->validityDate ?? '')) }}</td>
                         </tr>
                         @endforeach
                     </tbody>

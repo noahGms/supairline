@@ -19,12 +19,12 @@
 	<tbody>
 		@foreach($flights as $flight)
 		<tr>
-			<th>{{ $flight->id }}</th>
-			<th>{{ $flight->numero }}</th>
-			<th>{{ $flight->periodeValidity1 }}</th>
-			<th>{{ $flight->periodeValidity2 }}</th>
-			<th>{{ $flight->departureTime }}</th>
-			<th>{{ $flight->arrivalTime }}</th>
+			<th>{{ $flight->id ?? '' }}</th>
+			<th>{{ $flight->numero ?? '' }}</th>
+			<th>{{ $flight->periodeValidity1 ?? '' }}</th>
+			<th>{{ $flight->periodeValidity2 ?? '' }}</th>
+			<th>{{ $flight->departureTime ?? '' }}</th>
+			<th>{{ $flight->arrivalTime ?? '' }}</th>
 			<th>{{ $flight->route->numero ?? '' }}</th>
 			<th>{{ $flight->airplane->numero ?? '' }}</th>
 			<th><a href="/flights/{{ $flight->id }}/edit" class="btn btn-sm btn-outline-secondary"><i class="text-dark fas fa-edit"></i></a></th>

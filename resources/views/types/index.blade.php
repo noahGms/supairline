@@ -27,8 +27,8 @@
     <tbody>
         @foreach($types as $type)
         <tr>
-            <th scope="row">{{ $type->id }}</th>
-            <td>{{ $type->name }}</td>
+            <th scope="row">{{ $type->id ?? '' }}</th>
+            <td>{{ $type->name ?? '' }}</td>
             <th><a href="/types/{{ $type->id }}/edit" class="btn btn-sm btn-outline-secondary"><i class="text-dark fas fa-edit"></i></a></th>
             <th>
                 <form action="/types/{{ $type->id }}" method="post">

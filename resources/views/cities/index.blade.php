@@ -38,9 +38,9 @@
     <tbody>
         @foreach($cities as $city)
         <tr>
-            <th scope="row">{{ $city->id }}</th>
-            <td>{{ $city->name }}</td>
-            <td>{{ $city->zipCode }}</td>
+            <th scope="row">{{ $city->id ?? '' }}</th>
+            <td>{{ $city->name ?? '' }}</td>
+            <td>{{ $city->zipCode ?? '' }}</td>
             <th><a href="/cities/{{ $city->id }}/edit" class="btn btn-sm btn-outline-secondary"><i class="text-dark fas fa-edit"></i></a></th>
             <th>
                 <form action="/cities/{{ $city->id }}" method="post">

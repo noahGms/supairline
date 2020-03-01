@@ -57,10 +57,10 @@
     <tbody>
         @foreach($routes as $route)
         <tr>
-            <th scope="row">{{ $route->id }}</th>
-            <td>{{ $route->numero }}</td>
-            <td>{{ $route->dCity->name }}</td>
-            <td>{{ $route->aCity->name }}</td>
+            <th scope="row">{{ $route->id ?? '' }}</th>
+            <td>{{ $route->numero ?? '' }}</td>
+            <td>{{ $route->dCity->name ?? '' }}</td>
+            <td>{{ $route->aCity->name ?? '' }}</td>
             <th><a href="/routes/{{ $route->id }}/edit" class="btn btn-sm btn-outline-secondary"><i class="text-dark fas fa-edit"></i></a></th>
             <th>
                 <form action="/routes/{{ $route->id }}" method="post">

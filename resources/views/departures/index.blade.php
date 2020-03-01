@@ -23,11 +23,11 @@
 	<tbody>
 		@foreach($departures as $departure)
 		<tr>
-			<th>{{ $departure->id }}</th>
-			<th>{{ $departure->numero }}</th>
-			<th>{{ $departure->departureDate }}</th>
-			<th>{{ $departure->placeEmpty }}</th>
-			<th>{{ $departure->placeUsed }}</th>
+			<th>{{ $departure->id ?? '' }}</th>
+			<th>{{ $departure->numero ?? '' }}</th>
+			<th>{{ $departure->departureDate ?? '' }}</th>
+			<th>{{ $departure->placeEmpty ?? '' }}</th>
+			<th>{{ $departure->placeUsed ?? '' }}</th>
 			<th>{{ $departure->pilote1->name ?? '' }} {{ $departure->pilote1->firstName ?? '' }}</th>
 			<th>{{ $departure->pilote2->name ?? '' }} {{ $departure->pilote2->firstName ?? '' }}</th>
 			<th>{{ $departure->member1->name ?? '' }} {{ $departure->member1->firstName ?? '' }}</th>

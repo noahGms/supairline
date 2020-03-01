@@ -27,8 +27,8 @@
     <tbody>
         @foreach($employeesFunctions as $ef)
         <tr>
-            <th scope="row">{{ $ef->id }}</th>
-            <td>{{ $ef->name }}</td>
+            <th scope="row">{{ $ef->id ?? '' }}</th>
+            <td>{{ $ef->name ?? '' }}</td>
             <th><a href="/functions/{{ $ef->id }}/edit" class="btn btn-sm btn-outline-secondary"><i class="text-dark fas fa-edit"></i></a></th>
             <th>
                 <form action="/functions/{{ $ef->id }}" method="post">

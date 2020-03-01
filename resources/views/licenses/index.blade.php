@@ -37,8 +37,8 @@
     <tbody>
         @foreach($licenses as $license)
         <tr>
-            <th scope="row">{{ $license->id }}</th>
-            <td>{{ $license->numero }}</td>
+            <th scope="row">{{ $license->id ?? '' }}</th>
+            <td>{{ $license->numero ?? '' }}</td>
             <td>{{ Carbon\Carbon::parse($license->validityDate)->format('d-m-Y') }}</td>
             <th><a href="/licenses/{{ $license->id }}/edit" class="btn btn-sm btn-outline-secondary"><i class="text-dark fas fa-edit"></i></a></th>
             <th>
